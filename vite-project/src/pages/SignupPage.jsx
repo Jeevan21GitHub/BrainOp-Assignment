@@ -24,7 +24,7 @@ const SignupPage = () => {
         return toast.error("password mismatch")
     }
     try {
-        const response=await axios.post("http://localhost:5000/signup/verify",formData)
+        const response=await axios.post("/signup/verify",formData)
         if(response.data===true){
             toast.success("The Verification Mail send to you email")
             navigate("/login")

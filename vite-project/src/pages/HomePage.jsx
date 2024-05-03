@@ -22,7 +22,7 @@ const HomePage = () => {
 
   const getData = async (userToken) => {
     try {
-      const response = await axios.get(`http://localhost:5000/home/`, {
+      const response = await axios.get(`/home/`, {
         headers: {
           Authorization: userToken,
         },

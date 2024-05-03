@@ -22,7 +22,7 @@ const LoginPage = () => {
     e.preventDefault()
     try{
       setLoading(true)
-      const response=await axios.post(`http://localhost:5000/login/`,formData)
+      const response=await axios.post(`/login/`,formData)
     
       if(response?.data==="Invalid user name or password"){
         return toast.error("Invalid user name or password")
